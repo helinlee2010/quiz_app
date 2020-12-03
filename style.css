@@ -39,8 +39,8 @@ h1{
     text-align: center;
 }
 ul{
-    max-width: 80%;
-    border: 1px solid white;
+    min-width: 60%;
+    max-width: 80%;    
     padding: 1rem 0.3rem;
 }
 
@@ -49,6 +49,17 @@ li{
     font-size: 1.1rem;
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
+    border-radius: 5px;
+}
+li label{
+    margin-left:1rem;
+}
+li:nth-child(odd){
+    background-color: rgba(207, 239, 249,0.8);
+
+}
+li:nth-child(even){
+    background-color:rgba(242, 252, 229, 0.8);
 }
 
 #submit-btn{
@@ -61,4 +72,7 @@ li{
 #submit-btn:hover{
     background-color: rgb(99, 69, 99);
     color: rgb(213, 213, 213);
+}
+#submit-btn:focus{
+    outline: none;
 }
