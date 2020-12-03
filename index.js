@@ -50,13 +50,17 @@ const ans_text_c = document.getElementById("ans-text-c");
 const ans_text_d = document.getElementById("ans-text-d");
 const submitBtn = document.getElementById("submit-btn");
 
-
+let shuffled;
 let currentQuestion = 0;
 let score = 0;
 
-window.onload = loadQuiz;
+window.onload = ()=>{
+    shuffled = data.sort(()=>(Math.random()-0.5));
+    loadQuiz();
+};
 
 function loadQuiz(){
+    
     questionElm.innerHTML = data[currentQuestion].question;
     ans_text_a.innerHTML = data[currentQuestion].a;
     ans_text_b.innerHTML = data[currentQuestion].b;
